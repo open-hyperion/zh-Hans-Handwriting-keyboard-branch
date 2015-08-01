@@ -215,8 +215,11 @@ LayoutManager.prototype._updateCurrentPage = function() {
         targetPage: 1
       });
     } else {
+      if (layout.basicLayoutKey !== '' && !layout.basicLayoutKey) {
+          layout.basicLayoutKey = 'ABC';
+      }
       Object.assign(pageSwitchingKeyObject, {
-        value: layout.basicLayoutKey || 'ABC',
+        value: layout.basicLayoutKey,
         ariaLabel: 'basicLayoutKey2',
         targetPage: this.PAGE_INDEX_DEFAULT
       });
