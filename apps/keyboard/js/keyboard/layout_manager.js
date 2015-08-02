@@ -224,7 +224,7 @@ LayoutManager.prototype._updateCurrentPage = function() {
 
       if (layout.imEngine === 'handwriting') {
         Object.assign(pageSwitchingKeyObject, {
-          className: 'handwriting-icon',
+          className: 'handwriting-icon'
         });
       }
     }
