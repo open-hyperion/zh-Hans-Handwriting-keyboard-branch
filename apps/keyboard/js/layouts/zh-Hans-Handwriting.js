@@ -7,7 +7,8 @@ Keyboards['zh-Hans-Handwriting'] = {
   needsCommaKey: true,
   imEngine: 'handwriting',
   types: ['text'],
-  basicLayoutKey: '',
+  //types: ['handwriting'],
+  //basicLayoutKey: '',
   lang: 'zh-Hans',
   pages: [ { // basic page for handwriting pad
     needsCommaKey: true,
@@ -70,7 +71,7 @@ Keyboards['zh-Hans-Handwriting'] = {
         { value: '＃' }, { value: '％' }, { value: '／' },
         { value: '⌫', keyCode: KeyEvent.DOM_VK_BACK_SPACE }
       ], [
-        { className: 'handwriting-icon page-switch-key', targetPage: 2, ratio: 0, keyCode: KeyEvent.DOM_VK_ALT },
+        //{ className: 'handwriting-icon', targetPage: 2, ratio: 1, keyCode: KeyEvent.DOM_VK_ALT },
         { value: '&nbsp', ratio: 8, keyCode: KeyboardEvent.DOM_VK_SPACE },
         { value: '↵', ratio: 2, keyCode: KeyEvent.DOM_VK_RETURN }
       ]

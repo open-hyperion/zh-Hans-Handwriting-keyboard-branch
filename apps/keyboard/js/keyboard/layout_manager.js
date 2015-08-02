@@ -215,14 +215,18 @@ LayoutManager.prototype._updateCurrentPage = function() {
         targetPage: 1
       });
     } else {
-      if (layout.basicLayoutKey !== '' && !layout.basicLayoutKey) {
-          layout.basicLayoutKey = 'ABC';
-      }
+ 
       Object.assign(pageSwitchingKeyObject, {
-        value: layout.basicLayoutKey,
+        value: layout.basicLayoutKey || 'ABC',
         ariaLabel: 'basicLayoutKey2',
         targetPage: this.PAGE_INDEX_DEFAULT
       });
+
+      if (layout.imEngine === 'handwriting') {
+        Object.assign(pageSwitchingKeyObject, {
+          className: 'handwriting-icon',
+        });
+      }
     }
 
     pageSwitchingKeyObject =
